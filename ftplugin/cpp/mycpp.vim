@@ -16,3 +16,5 @@ function! <SID>InsertRCSKeywordsFunction()
 endfunction
 command! -nargs=0 InsertRCSKeywords :call <SID>InsertRCSKeywordsFunction()
 map <Leader>h :InsertRCSKeywords<CR>
+
+"Test
