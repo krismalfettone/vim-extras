@@ -9,3 +9,7 @@ setlocal foldmethod=syntax
 
 "Allow vim to undo our settings
 let b:undo_ftplugin = "setlocal foldmethod<"
+
+"Remove this when moved to after/ftplugin script
+unlet b:did_ftplugin
+source "%VIMRUNTIME/ftplugin/xml.vim"
