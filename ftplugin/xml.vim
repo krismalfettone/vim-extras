@@ -5,7 +5,7 @@ if exists("b:did_ftplugin") | finish | endif
 let b:did_ftplugin = 1
 
 "Turn on folding by default
-selocal foldmethod=syntax
+setlocal foldmethod=syntax
 
 "Allow vim to undo our settings
 let b:undo_ftplugin = "setlocal foldmethod<"
