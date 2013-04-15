@@ -1,11 +1,16 @@
+" Only do this when not done yet for this buffer
+" Don't need to do this for after ftplugins
+"if exists("b:did_ftplugin") | finish | endif
+"let b:did_ftplugin = 1
+
+" PEP8 says 4 spaces
+setlocal ts=4
+setlocal sw=4
+
 "This isn't working for now
 "set omnifunc=pythoncomplete#Complete
 "let g:SuperTabDefaultCompletionType = "context"
 "set completeopt=menuone,longest,preview
-
-" PEP8 says 4 spaces
-set ts=4
-set sw=4
 
 " Add the virtualenv's site-packages to vim path
 py << EOF
@@ -19,6 +24,6 @@ if 'VIRTUAL_ENV' in os.environ:
     execfile(activate_this, dict(__file__=activate_this))
 EOF
 
-let g:pylint_onwrite = 0
-let g:pylint_cwindow = 0
+let b:pylint_onwrite = 0
+let b:pylint_cwindow = 0
 compiler pylint
