@@ -1,9 +1,9 @@
-"My C++ Settings
-if exists("loaded_mycpp_vim")
-   finish
-endif
-let loaded_mycpp_vim = 1
+" Only do this when not done yet for this buffer
+" We don't need to do this for the after ftplugin
+"if exists("b:did_ftplugin") | finish | endif
+"let b:did_ftplugin = 1
 
+"My C++ Settings
 set path+=$PROJ_SRC_DIR
 set foldmethod=manual
 
@@ -16,5 +16,3 @@ function! <SID>InsertRCSKeywordsFunction()
 endfunction
 command! -nargs=0 InsertRCSKeywords :call <SID>InsertRCSKeywordsFunction()
 map <Leader>h :InsertRCSKeywords<CR>
-
-"Test
