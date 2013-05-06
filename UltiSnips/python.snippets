@@ -1,6 +1,12 @@
-snippet mytest "Just to test my snippets are found" b
-@property
-def ${1:whatsup}(self):
-	${2:return self._$1}$0
+#! header
+snippet #! "Shebang header for python scripts" b!
+#!/usr/bin/env python
+# encoding: utf-8
+# $Id$
+# $Author$
+# $Date$
+# $Change$
+$0
 endsnippet
+
 # vim:ft=snippets:
